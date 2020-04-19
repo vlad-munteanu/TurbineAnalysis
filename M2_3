@@ -1,0 +1,30 @@
+#!/usr/bin/python3
+import csv
+
+# Constants
+swept_area = 0.15
+air_density = 1.2754
+air_velocity = 1.75
+
+# This reads the data from the data file
+
+
+def readData():
+    fp = open("data.csv")
+    reader = csv.reader(fp)
+    data_list = []
+
+    # Skips first line of csv file
+    next(reader)
+    for line in reader:
+        resistance = float(line[0])
+        voltage = float(line[1])
+        data_list.append((resistance, voltage))
+    return data_list
+
+
+def main():
+
+
+if __name__ == '__main__':
+    main()
